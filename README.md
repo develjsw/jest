@@ -23,19 +23,24 @@
 
 - 소스파일, 테스트파일 생성
   1. 방식1
-     - src/파일명.js 생성 후 소스코드 작성
-     - src/파일명.spec.js 생성 후 테스트코드 작성
+     - src/파일명.ts 생성 후 소스코드 작성
+     - src/파일명.spec.ts 생성 후 테스트코드 작성
   2. 방식2
-     - src/파일명.js 생성 후 소스코드 작성
-     - test 폴더 생성 후 test/파일명.spec.js 생성 후 테스트코드 작성
+     - src/파일명.ts 생성 후 소스코드 작성
+     - test 폴더 생성 후 test/파일명.spec.ts 생성 후 테스트코드 작성
 
 
-- windows에서 리눅스 환경설정 명령어 실행을 위한 cross-env 패키지 설치
+- typescript 소스코드를 jest로 실행하기 위한 패키지 설치
   ~~~
-  $ npm i -D cross-env
-  ~~~ 
+  $ npm i ts-jest @types/jest
+  ~~~
+  
+- jest용 typescript 설정파일 생성
+  ~~~
+  $ npx ts-jest config:init
+  ~~~
 
 - 테스트 코드 실행
   ~~~
-  $ npx cross-env NODE_OPTIONS="$NODE_OPTIONS --experimental-vm-modules" jest
+  $ npx jest
   ~~~
